@@ -121,7 +121,7 @@ impl Connection {
 
     // Reset the device to flash mode
     pub fn reset_to_flash(&mut self, extra_delay: bool) -> Result<(), Error> {
-        if self.port_info.pid == USB_SERIAL_JTAG_PID {
+        if true {
             self.serial.write_data_terminal_ready(false)?;
             self.serial.write_request_to_send(false)?;
 
